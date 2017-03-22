@@ -15,6 +15,7 @@
 		286F5E071C0BEE82008D3A29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286F5E051C0BEE82008D3A29 /* LaunchScreen.storyboard */; };
 		286F5E121C0BEE82008D3A29 /* ReboundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5E111C0BEE82008D3A29 /* ReboundTests.m */; };
 		286F5E1D1C0BEE82008D3A29 /* ReboundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5E1C1C0BEE82008D3A29 /* ReboundUITests.m */; };
+		286F5E2D1C0BEED6008D3A29 /* ReboundAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 286F5E2C1C0BEED6008D3A29 /* ReboundAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		286F5E181C0BEE82008D3A29 /* ReboundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReboundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286F5E1C1C0BEE82008D3A29 /* ReboundUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReboundUITests.m; sourceTree = "<group>"; };
 		286F5E1E1C0BEE82008D3A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		286F5E2B1C0BEED6008D3A29 /* ReboundAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReboundAction.h; sourceTree = "<group>"; };
+		286F5E2C1C0BEED6008D3A29 /* ReboundAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReboundAction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		286F5DF61C0BEE82008D3A29 /* Rebound */ = {
 			isa = PBXGroup;
 			children = (
+				286F5E2A1C0BEE9C008D3A29 /* 回弹效果 */,
 				286F5DFA1C0BEE82008D3A29 /* AppDelegate.h */,
 				286F5DFB1C0BEE82008D3A29 /* AppDelegate.m */,
 				286F5DFD1C0BEE82008D3A29 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				286F5E1E1C0BEE82008D3A29 /* Info.plist */,
 			);
 			path = ReboundUITests;
+			sourceTree = "<group>";
+		};
+		286F5E2A1C0BEE9C008D3A29 /* 回弹效果 */ = {
+			isa = PBXGroup;
+			children = (
+				286F5E2B1C0BEED6008D3A29 /* ReboundAction.h */,
+				286F5E2C1C0BEED6008D3A29 /* ReboundAction.m */,
+			);
+			path = "回弹效果";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +215,7 @@
 		286F5DEC1C0BEE82008D3A29 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "IOS-开发机";
 				TargetAttributes = {
 					286F5DF31C0BEE82008D3A29 = {
@@ -273,6 +286,7 @@
 				286F5DFF1C0BEE82008D3A29 /* ViewController.m in Sources */,
 				286F5DFC1C0BEE82008D3A29 /* AppDelegate.m in Sources */,
 				286F5DF91C0BEE82008D3A29 /* main.m in Sources */,
+				286F5E2D1C0BEED6008D3A29 /* ReboundAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,8 +354,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -384,8 +400,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -498,6 +516,7 @@
 				286F5E231C0BEE82008D3A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		286F5E241C0BEE82008D3A29 /* Build configuration list for PBXNativeTarget "ReboundTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +525,7 @@
 				286F5E261C0BEE82008D3A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		286F5E271C0BEE82008D3A29 /* Build configuration list for PBXNativeTarget "ReboundUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +534,7 @@
 				286F5E291C0BEE82008D3A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
